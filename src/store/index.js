@@ -16,8 +16,6 @@ const StoreProvider = ({ children }) => {
       {children}
     </Store.Provider>
   )
-
 }
-
 
 export default StoreProvider
