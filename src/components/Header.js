@@ -6,7 +6,10 @@ const Header = () => {
     <AppBar position="static">
       <Toolbar>
         <h3>GlobalState</h3>
-        <Link to="SecondPage">SecondPageへ移動</Link>
+        <Link to="/">Top</Link>
+        <Link to="SecondPage">Second</Link>
+
+
       </Toolbar>
     </AppBar>
   );
