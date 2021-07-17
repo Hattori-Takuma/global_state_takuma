@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react'
 import { fetchGetTodoData } from '../apis/index'
 import { Store } from '../store/index'
-import { GET_DATA } from '../actions/index'
+import { COMMENTS_DATA } from '../actions/index'
 import Card from '../components/Cardsecond'
 
 const SecondPage = () => {
@@ -9,7 +9,7 @@ const SecondPage = () => {
   useEffect(() => {
     fetchGetTodoData().then(res => {
       setGlobalState({
-        type: GET_DATA,
+        type: COMMENTS_DATA,
         data: res.data
       })
     })
@@ -23,7 +23,7 @@ const SecondPage = () => {
     <div>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {
-          globalState.user_data.map((comments, index) => {
+          globalState.comments_data.map((comments, index) => {
             return (
               <Card user={comments} key={index} />
             )
